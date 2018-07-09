@@ -93,5 +93,13 @@ const openGraphMetadata = ({title, summary= "A daily smart post."}) =>{
 
 openGraphMetadata(blog);   */
 
+//working with classes--finally some object oriented stuff
+class Instructor {
+    constructor({_name}){
+        this.name = _name;
+    }
+}
 
+const pilot = new Instructor({_name: "Roy Fokker"});
+console.log(pilot.name);
 
