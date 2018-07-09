@@ -91,7 +91,7 @@ const openGraphMetadata = ({title, summary= "A daily smart post."}) =>{
     `);
 }
 
-openGraphMetadata(blog);   */
+openGraphMetadata(blog);   
 
 //working with classes--finally some object oriented stuff
 class Instructor {
@@ -120,4 +120,25 @@ wing.renderDetails();
 Instructor.helloWorld();
 
 console.log(`${pilot.name} can teach: ${Instructor.canTeach(pilot)}`);
-console.log(`${wing.name} can teach: ${Instructor.canTeach(wing)}`);
+console.log(`${wing.name} can teach: ${Instructor.canTeach(wing)}`);   */
+
+
+//promises promises
+let sleepyGreeting = new Promise((resolve, reject) => {
+    setTimeout (() => {
+        resolve("Hello...")
+    }, 2000);
+
+    setTimeout (() => {
+        reject("Too sleepy...")
+    }, 2000);
+});
+
+sleepyGreeting
+    .then( data => {
+        console.log(data);
+    })
+    .catch( err => {
+        console.error(err)
+    });
+
