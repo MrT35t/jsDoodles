@@ -95,11 +95,29 @@ openGraphMetadata(blog);   */
 
 //working with classes--finally some object oriented stuff
 class Instructor {
-    constructor({_name}){
+    constructor({_name, _role = "Skull Leader"}){
         this.name = _name;
+        this.role = _role;
+    }
+
+    renderDetails() {
+        console.log(`${this.name}: ${this.role}`);
+    }
+
+    static helloWorld() {
+        console.log("Hello Macross City!");
+    }
+
+    static canTeach(_instructor) {
+        return (_instructor.role === "Skull Leader");
     }
 }
 
 const pilot = new Instructor({_name: "Roy Fokker"});
-console.log(pilot.name);
+const wing = new Instructor({_name: "Rick Hunter", _role: "Red Leader"});
+pilot.renderDetails();
+wing.renderDetails();
+Instructor.helloWorld();
 
+console.log(`${pilot.name} can teach: ${Instructor.canTeach(pilot)}`);
+console.log(`${wing.name} can teach: ${Instructor.canTeach(wing)}`);
