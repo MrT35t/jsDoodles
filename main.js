@@ -120,7 +120,7 @@ wing.renderDetails();
 Instructor.helloWorld();
 
 console.log(`${pilot.name} can teach: ${Instructor.canTeach(pilot)}`);
-console.log(`${wing.name} can teach: ${Instructor.canTeach(wing)}`);   */
+console.log(`${wing.name} can teach: ${Instructor.canTeach(wing)}`); 
 
 
 //promises promises
@@ -140,5 +140,15 @@ sleepyGreeting
     })
     .catch( err => {
         console.error(err)
-    });
+    }); */
+
+
+    //Stop trying to make "fetch" happen
+    console.log("starting fetch call");
+    const postsPromise = fetch("https://api.dailysmarty.com/posts");
+    console.log("after fetch call");
+    console.log(postsPromise);
+    console.log("after program has run");
+
+
 
